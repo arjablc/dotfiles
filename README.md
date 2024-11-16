@@ -11,3 +11,8 @@ stow hypr #use desired name in place of hypr
 requires `brightnessctl` for hyprland keybindings
 requires font awesome for waybar 
 and Cascadya mono nerd font for kitty.
+
+
+
+- Working on a bash script to install required packages.
+    [install_script](./install_script.md)
