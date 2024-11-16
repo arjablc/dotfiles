@@ -1,0 +1,38 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Main Config 1080p */
+
+@import "~/.config/rofi/master-config.rasi" 
+
+/* ---- Configuration ---- */
+configuration {
+	font: "Caskaydia Mono Nerd Font 10";
+}
+
+/* ---- Window ---- */
+window {
+    width:	40%;
+}
+/* ---- Listview ---- */
+listview {
+  columns: 1;
+  lines: 6;
+  fixed-height:	true;
+}
+
+/* ---- Element ---- */
+element {
+  orientation: horizontal;
+  padding: 10px;
+  spacing: 6px;
+  border-radius: 8px;
+}
+
+element-icon {
+  size: 4%;
+}
+
+element-text {
+  font: "Caskaydia Mono Nerd Font 14";
+  vertical-align: 0.5;
+  horizontal-align: 0.5;
+}
