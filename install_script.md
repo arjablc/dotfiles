@@ -10,13 +10,14 @@ Made by a bash newbie so script might not be to your liking.
 
 Requirements:
 - make sure pipewire is installed
-- intall network manager 
+- install network manager 
 - and a aur helper, yay 
 - kitty ofc
 
 # Todo
 
-- [ ]  Make the script check for yay 
+- [ ] Make the script check for yay
+- [ ] install yay if not found
 - [ ] Check if the packages are already installed or not
 - [ ] instll if not already installed skip otherwise
 
