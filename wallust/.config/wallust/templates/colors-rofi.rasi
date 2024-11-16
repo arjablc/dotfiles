@@ -1,0 +1,17 @@
+* {
+
+background: {{background}};
+foreground: {{foreground}};
+
+activecolor: {{color5}};
+selectedcolor: {{color2}};
+bordercolor: {{color0}};
+selectedtext: {{color15}};
+selectedbackgroundcolor: {{color10}};
+
+
+urgentcolor: {{color8}};
+
+
+
+}
