@@ -34,6 +34,7 @@ Requirements:
 - rofi-wayland (rofi fork to work with wlroots)
 - dolphin (preferred file manager)
 - wlogout  (aur)
+- bluez, blueman 
 - fonts 
     - Caskaydia code nerd font (kitty)
     - Font Awesome (waybar)

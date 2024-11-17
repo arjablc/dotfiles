@@ -2,17 +2,18 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "spacing": 4, // Gaps between modules (4px)
-    "margin-top" : 5,
+    "spacing": 2, // Gaps between modules (4px)
+    "margin-top" : 4,
+    "height": 8,
     "margin-left" : 8,
     "margin-right" : 8,
     "mode": "dock",
+    "reload_style_on_change": false,
     // Choose the order of the modules
+
     "modules-left": [
-        "custom/hypridle",
-        "clock",
-        "custom/media",
-        "hyprland/window"
+      "group/right-group",
+      "custom/gap"
     ],
     "modules-center": [
         "hyprland/workspaces",
@@ -22,15 +23,41 @@
         "mpd",
         "pulseaudio",
         "bluetooth",
+        "group/info",
         "network",
-        "cpu",
-        "memory",
-        "temperature",
         "backlight",
         "battery",
         "custom/power"
     ],
+
+    "group/right-group": {
+      "orientation": "horizontal",
+      "modules": [
+        "clock",
+        "hyprland/window"
+      ]
+    },
+    "group/info": {
+      "orientation": "horizontal",
+      "drawer": {
+        "transition-duration": 500,
+        "children-class": "not-cpu",
+        "transition-left-to-right": true
+      },
+      "modules": [
+        "cpu",
+        "memory",
+        "temperature"
+
+      ]
+    },
+
+
      //Modules configuration
+     "custom/gap" : {
+       "format": " ",
+       "tooltip": false
+     },
      "hyprland/workspaces": {
          "disable-scroll": false,
          "all-outputs": true,
@@ -38,17 +65,34 @@
          "persistent-workspaces": {
            "*": 5
          },
+         "window-rewrite": {
+           "title<.*youtube.*>": "",
+           "class<firefox>": "",
+           "class<firefox> title<.*github.*>": "󰈹",
+           "kitty": "",
+           "spotify":  ""
+          
+
+         },
+         //put a {windows} inside foramt to make use of icons defined above
          "format": "{icon}",
          "format-icons": {
              "urgent": "",
-             "active": ""
+             "active": "󰺕",
+             "default": ""
          }
      },
 
      "hyprland/window": {
-       "format" : "{initialTitle}",
+       "format" : "{title}",
        "icon": true,
-       "icon-size": 20
+       "icon-size": 15,
+       "rewrite": {
+       //    ".*youtube.com*.": " Youtube{title}",
+       //    ".*firefox*.": "󰈹 Firefox",
+           ".*kitty*.": " Kitty"
+       //    ".*spotify*.":  " Spotify"
+       }
      },
     "keyboard-state": {
         "numlock": true,
@@ -95,7 +139,7 @@
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%r, %b,}",
+        "format": "{:%I:%M %p,%b,%d}",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
@@ -124,7 +168,7 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
+        "format": "{icon} {capacity}%",
         "format-full": "{capacity}% {icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",

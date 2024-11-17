@@ -2,35 +2,29 @@
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, "JetBrains Mono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
     font-size: 13px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+ }
+
+/*Makes the bar slimmer*/
+label {
+  all: unset;
 }
+button {
+  all: unset;
+}
+/*-------*/
+@import "./wallust/wallust-waybar.css";
 
 window#waybar {
     background-color: transparent ;
-    color: #ffffff;
+    color: @color15;
     transition-property: background-color;
     transition-duration: .5s;
 }
 
 window#waybar.hidden {
     opacity: 0.2;
-}
-
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
 }
 
 button {
@@ -47,37 +41,56 @@ button:hover {
     box-shadow: inset 0 -3px #ffffff;
 }
 
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-    background-color: #a37800;
+#tooltip {
+  background-color: @background;
+
 }
 
-#workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: #ffffff;
-}
 
-#workspaces button:hover {
-    background: rgba(0, 0, 0, 0.2);
+/*WORKSPACES style*/
+#workspaces {
+  background-color: @color0;
+  border-radius: 20px;
+  padding: 0px 5px 0px 5px;
 }
-
-#workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+#workspaces button.active {
+  background-color: @background;
+  border-radius: 18px;
+  padding-left: 12px;
+  padding-right: 12px;
 }
-
 #workspaces button.urgent {
-    background-color: #eb4d4b;
+  background-color: #c1121f;
+}
+#workspaces button {
+  padding: 5px;
+}
+#workspaces button:hover {
+  border-radius: 20px;
+  background-color: @background;
+  border: none;
+  box-shadow: 0px 2px 0px @color15;
+}
+/*WINDOW style*/
+#window {
+  background-color: @color0;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: 0;
+  border-radius:  0px 18px 18px 0px;
+}
+/*clock*/
+#clock{
+  margin-right: 0;
+  background-color: @color0;
+  border-radius: 18px 0px 0px 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#custom-gap {
+  padding-left: 100px;
 }
 
-#mode {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
-}
-
-#clock,
-#battery,
 #cpu,
 #memory,
 #disk,
@@ -94,8 +107,6 @@ button:hover {
 #power-profiles-daemon,
 #custom-hypridle
 #mpd {
-    padding: 0 10px;
-    color: #ffffff;
 }
 
 #window,
@@ -106,6 +117,7 @@ button:hover {
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
+    margin-right: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
@@ -113,18 +125,18 @@ button:hover {
     margin-right: 0;
 }
 
-#clock {
-    background-color: #64727D;
-}
 
 #battery {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: @background;
+    border-radius: 0px 18px 18px 0px;
+    padding-left: 5px;
+    padding-right: 8px;
 }
 
 #battery.charging, #battery.plugged {
-    color: #ffffff;
-    background-color: #26A65B;
+    color: @color15;
+    background-color: #225522;
+
 }
 
 @keyframes blink {
