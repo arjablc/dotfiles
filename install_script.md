@@ -35,6 +35,8 @@ Requirements:
 - dolphin (preferred file manager)
 - wlogout  (aur)
 - bluez, blueman 
+- pavucontrol
+- pamixer
 - fonts 
     - Caskaydia code nerd font (kitty)
     - Font Awesome (waybar)
