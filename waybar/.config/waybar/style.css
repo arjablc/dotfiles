@@ -1,9 +1,10 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
     font-family: FontAwesome, "JetBrains Mono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 13px;
+    font-size: 12px;
     padding-top: 0px;
     padding-bottom: 0px;
+
  }
 
 /*Makes the bar slimmer*/
@@ -46,7 +47,6 @@ button:hover {
 
 }
 
-
 /*WORKSPACES style*/
 #workspaces {
   background-color: @color0;
@@ -64,6 +64,8 @@ button:hover {
 }
 #workspaces button {
   padding: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 #workspaces button:hover {
   border-radius: 20px;
@@ -76,12 +78,18 @@ button:hover {
   background-color: @color0;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: 0;
   border-radius:  0px 18px 18px 0px;
+
+}
+#waybar.empty #window {
+  background-color: @color0;
+  padding: 3px;
+  
+
 }
 /*clock*/
 #clock{
-  margin-right: 0;
+  margin-right: 2px;
   background-color: @color0;
   border-radius: 18px 0px 0px 18px;
   padding-left: 10px;
@@ -91,28 +99,12 @@ button:hover {
   padding-left: 100px;
 }
 
-#cpu,
-#memory,
-#disk,
-#temperature,
 #backlight,
 #network,
 #pulseaudio,
 #wireplumber,
 #custom-media,
-#tray,
-#mode,
 #idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#custom-hypridle
-#mpd {
-}
-
-#window,
-#workspaces {
-    margin: 0 4px;
-}
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
@@ -127,7 +119,7 @@ button:hover {
 
 
 #battery {
-    background-color: @background;
+    background-color: @color0;
     border-radius: 0px 18px 18px 0px;
     padding-left: 5px;
     padding-right: 8px;
@@ -141,14 +133,14 @@ button:hover {
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: @color12;
+        color: @color2;
     }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: #f53c3c;
+    background-color: @color5;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -157,141 +149,87 @@ button:hover {
     animation-direction: alternate;
 }
 
-#power-profiles-daemon {
-    padding-right: 15px;
+#cpu, #memory, #disk, #temperature {
+    background-color: @color0;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 20px;
 }
-
-#power-profiles-daemon.performance {
-    background-color: #f53c3c;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.balanced {
-    background-color: #2980b9;
-    color: #ffffff;
-}
-
-#power-profiles-daemon.power-saver {
-    background-color: #2ecc71;
-    color: #000000;
-}
-
-label:focus {
-    background-color: #000000;
-}
-
 #cpu {
-    background-color: #2ecc71;
-    color: #000000;
+  border-radius: 20px 0px 0px 20px;
+  padding-right: 5px;
 }
-
 #memory {
-    background-color: #9b59b6;
+  border-radius: 0px 0px 0px 0px;
 }
-
 #disk {
-    background-color: #964B00;
+  border-radius: 0px 20px 20px 0px;
 }
-
-#backlight {
-    background-color: #90b1b1;
-}
-
-#network {
-    background-color: #2980b9;
-}
-
-#network.disconnected {
-    background-color: #f53c3c;
-}
-
-#pulseaudio {
-    background-color: #f1c40f;
-    color: #000000;
-}
-
-#pulseaudio.muted {
-    background-color: #90b1b1;
-    color: #2a5c45;
-}
-
-#wireplumber {
-    background-color: #fff0f5;
-    color: #000000;
-}
-
-#wireplumber.muted {
-    background-color: #f53c3c;
-}
-
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
-
 #temperature {
-    background-color: #f0932b;
+  border-radius: 0px 0px 0px 0px;
 }
 
 #temperature.critical {
     background-color: #eb4d4b;
 }
 
-#tray {
-    background-color: #2980b9;
+#backlight {
+    background-color: @color0;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
-#tray > .passive {
-    -gtk-icon-effect: dim;
+#network {
+    background-color: @color0;
+    padding-left: 10px;
+    padding-right: 10px;
+
 }
 
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
-    background-color: #eb4d4b;
+#network.disconnected {
+    background-color: @color6;
+}
+
+#pulseaudio {
+    border-radius: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: @color0;
+    color: @color15;
+    transition-property: all;
+    transition-duration: 0.5s;
+}
+
+#pulseaudio.muted {
+    background-color: @color6;
+    padding-left: 5px;
+    color: @color15;
+}
+#bluetooth {
+  background-color: @color0;
+  padding-left: 7px;
+  padding-right: 7px;
+  border-radius: 20px;
 }
 
 #idle_inhibitor {
-    background-color: #2d3436;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: @color0;
+  border-radius: 20px;
 }
 
 #idle_inhibitor.activated {
-    background-color: #ecf0f1;
-    color: #2d3436;
+    background-color: @color6;
+}
+#mpris {
+  background-color: @color0;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  border-radius: 20px;
 }
 
-#mpd {
-    background-color: #66cc99;
-    color: #2a5c45;
-}
-
-#mpd.disconnected {
-    background-color: #f53c3c;
-}
-
-#mpd.stopped {
-    background-color: #90b1b1;
-}
-
-#mpd.paused {
-    background-color: #51a37a;
-}
-
-#language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
-}
 
 #keyboard-state {
     background: #97e1ad;
@@ -309,23 +247,13 @@ label:focus {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#scratchpad {
-    background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-	background-color: transparent;
-}
-
 #privacy {
     padding: 0;
 }
-
 #privacy-item {
     padding: 0 5px;
     color: white;
 }
-
 #privacy-item.screenshare {
     background-color: #cf5700;
 }
@@ -333,7 +261,13 @@ label:focus {
 #privacy-item.audio-in {
     background-color: #1ca000;
 }
-
 #privacy-item.audio-out {
     background-color: #0069d4;
+}
+
+#custom-power {
+  background-color: @color2;
+  border-radius: 20px;
+  padding-left: 12px;
+  padding-right: 10px;
 }

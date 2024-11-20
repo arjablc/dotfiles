@@ -12,21 +12,22 @@
     // Choose the order of the modules
 
     "modules-left": [
+      "idle_inhibitor",
+      "mpris",
       "group/right-group",
       "custom/gap"
     ],
     "modules-center": [
-        "hyprland/workspaces",
-        "keyboard-state"
+        "hyprland/workspaces"
     ],
     "modules-right": [
-        "mpd",
-        "pulseaudio",
         "bluetooth",
+        "pulseaudio",
         "group/info",
         "network",
         "backlight",
         "battery",
+        "custom/gapright",
         "custom/power"
     ],
 
@@ -47,9 +48,10 @@
       "modules": [
         "cpu",
         "memory",
-        "temperature"
-
-      ]
+        "temperature",
+        "disk"
+      ],
+      "tooltip": "System Information Group"
     },
 
 
@@ -132,18 +134,18 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "",
-            "deactivated": ""
+            "activated": " ",
+            "deactivated": " "
         }
     },
     "clock": {
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%I:%M %p,%b,%d}",
+        "format": "{:%I:%M %p,%b %d}",
         "format-alt": "{:%Y-%m-%d}"
     },
     "cpu": {
-        "format": "{usage}%",
+        "format": "{usage}% >",
         "tooltip": false
     },
     "memory": {
@@ -154,8 +156,12 @@
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
         // "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C{icon}",
         "format-icons": ["", "", ""]
+    },
+    "disk": {
+      "format": "{percentage_used}%"
+
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -179,12 +185,21 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
+        "interval": 1,
+        "format-wifi": "{icon} {bandwidthUpBytes}{bandwidthUpBytes}",
+        "format-ethernet": "{icon} {bandwidthUpBytes}{bandwidthUpBytes}",
+        "tooltip-format": "{ipaddr} via {gwaddr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ⚠",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+        "tooltip-format-wifi": "",
+        "format-disconnected": "Disconnected⚠",
+        "max-length": 15,
+        "min-lenght": 15,
+        "format-alt": "{ifname}:{ipaddr}/{cidr}",
+        "on-click-right": "nm-applet --indicator" ,
+        "on-click-middle": "kitty nmtui",
+        "format-icons": [
+          "󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
+	]
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
@@ -205,20 +220,49 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/media": {
-        "format": "{icon} {}",
-        "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    "mpris": {
+      "interval": 0,
+      "format": "{player_icon} {dynamic}",
+      "format-paused": "{status_icon} {dynamic}",
+      "on-click-middle": "playerctl previous",
+      "on-click": "playerctl play-pause",
+      "on-click-right": "playerctl next",
+      "on-scroll-up": "$HOME/.config/waybar/scripts/volume.sh --inc",
+      "on-scroll-down": "$HOME/.config/waybar/scripts/volume.sh --dec",
+      "player-icons": {
+        "chromium": "",
+        "default": "",
+        "firefox": "",
+        "kdeconnect": "",
+        "mopidy": "",
+        "mpv": "󰐹",
+        "spotify": "",
+        "vlc": "󰕼"
+      },
+      "status-icons": {
+        "paused": "󰐎",
+        "playing": "",
+        "stopped": ""
+      },
+      "max-length": 30
+    }
+
+
+ 
+    },
+    "bluetooth" : {
+      "format": "{status}󰂯",
+      "format-off": "",
+      "format-diabled": "{status}󰂯",
+      "format-connected": "{device_alias}",
+      "on-click": "blueman-manager"
+    },
+
+    "custom/gapright" : {
+      "format" : ""
     },
     "custom/power": {
-        "format" : "⏻ ",
+        "format" : " ",
 		"tooltip": false,
 		"menu": "on-click",
 		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
