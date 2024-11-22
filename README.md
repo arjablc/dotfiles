@@ -1,6 +1,8 @@
 # Dotfiles
 ## Mostly for hyprland stuff
 
+<img src="./sample/hyprland-sample.png">
+
 - Use gnu-stow to create a symlick between this repo and the config folder
 
 -Simply goto the repo, do 
