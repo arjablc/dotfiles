@@ -1,7 +1,7 @@
 # Dotfiles
 ## Mostly for hyprland stuff
 
-<img src="./sample/hyprland-sample.png">
+<img src="./sample/hyprland-sample.png", height="500">
 
 - Use gnu-stow to create a symlick between this repo and the config folder
 
@@ -10,11 +10,7 @@
 stow hypr #use desired name in place of hypr
 ```
 ***Voila*** You have your dot configured.
-requires `brightnessctl` for hyprland keybindings
-requires font awesome for waybar 
-and Cascadya mono nerd font for kitty.
-
-
 
 - Working on a bash script to install required packages.
     [install_script](./install_script.md)
+    Refer there to see requirements 

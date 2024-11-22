@@ -102,4 +102,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias nv="nvim "
+alias note="nvim ~/notes"
+
 eval "$(starship init zsh)"
+export PATH="$HOME/flutter/bin:$PATH"
+fastfetch -c ~/.config/fastfetch/fastfetch-compact.jsonc
