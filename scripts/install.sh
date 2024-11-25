@@ -6,10 +6,11 @@
 #
 #Check if yay is is_installed
 check_yay() {
-  if ! pacman -Qs yay &> /dev/null
-    echo "Yay is not installed"
+  if command -v yay &> /dev/null; then
+    echo "yay is already installed. Exiting."
+    return 0
   else 
-    echo "yay is already installed"
+    return 1
   fi
 }
 
@@ -33,6 +34,19 @@ packages=(
   "ttf-cascadia-code-nerd"
   "otf-font-awesome"
 )
+install_yay_deps () {
+  echo "Installing yay dependencies"
+  sudo pacman -S --needed --noconfirm git base-devel
+}
+install_yay () {
+  echo "cloning remote yay repo"
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  echo "building yay"
+  makepkg -si --noconfirm
+  cd ..
+  rm -rf ./yay
+}
 
 # Function to check if a package is installed
 is_installed() {
@@ -53,6 +67,15 @@ install_package() {
         echo "$1 is already installed, skipping installation."
     fi
 }
+
+if check_yay; then
+  echo "YAY is already installed, YAY!!"
+else 
+  install_yay_deps
+  install_yay
+
+fi
+
 
 # Iterate over the list of packages and install if necessary
 for pkg in "${packages[@]}"; do
