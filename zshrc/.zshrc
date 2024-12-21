@@ -104,7 +104,10 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias nv="nvim "
 alias note="nvim ~/notes"
+alias fl_brw="dart run build_runner --delete-conflicting-outputs"
 
 eval "$(starship init zsh)"
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+export PATH="$PATH:$HOME/Android/Sdk/platform-tools/"
 export PATH="$HOME/flutter/bin:$PATH"
 fastfetch -c ~/.config/fastfetch/fastfetch-compact.jsonc
