@@ -16,10 +16,11 @@ Requirements:
 
 # Todo
 
-- [ ] Make the script check for yay
-- [ ] install yay if not found
-- [ ] Check if the packages are already installed or not
-- [ ] instll if not already installed skip otherwise
+- [x] Make the script check for yay
+- [x] install yay if not found
+- [x] Check if the packages are already installed or not
+- [x] instll if not already installed skip otherwise
+- [ ] error handling 
 
 
 ## Package List 
