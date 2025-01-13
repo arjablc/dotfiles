@@ -104,11 +104,17 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias nv="nvim "
 alias note="nvim ~/notes"
-alias fl_brw="dart run build_runner " 
+alias fl_br="dart run build_runner " 
+alias fl_brw="dart run build_runner watch --delete-conflicting-outputs" 
+alias lg="lazygit "
 
 eval "$(starship init zsh)"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH:$HOME/Android/Sdk/platform-tools/"
 export PATH="$HOME/flutter/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/home/knot/.config/heroic/tools/wine/Wine-GE-Proton8-26/bin:$PATH"
 fastfetch -c ~/.config/fastfetch/fastfetch-compact.jsonc
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
