@@ -2,6 +2,7 @@
 ## Mostly for hyprland stuff
 
 <img src="./sample/hyprland-sample.png" height="500">
+<img src="./sample/hyprland-sample-2.png" height="500">
 
 - Use gnu-stow to create a symlick between this repo and the config folder
 

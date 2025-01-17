@@ -245,10 +245,6 @@
         "stopped": ""
       },
       "max-length": 30
-    }
-
-
- 
     },
     "bluetooth" : {
       "format": "{status}󰂯",
