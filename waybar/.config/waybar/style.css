@@ -1,11 +1,11 @@
 * {
-    /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome,"JetBrainsMono Nerd Font",Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-
- }
+  /* `otf-font-awesome` is required to be installed for icons */
+  font-family: FontAwesome, "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial,
+    sans-serif;
+  font-size: 13px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
 
 /*Makes the bar slimmer*/
 label {
@@ -18,44 +18,44 @@ button {
 @import "./wallust/wallust-waybar.css";
 
 window#waybar {
-    background-color: transparent ;
-    color: @color15;
-    transition-property: background-color;
-    transition-duration: .5s;
+  background-color: @color1;
+  border-radius: 16;
+  color: #ffffff;
+  transition-property: background-color;
+  transition-duration: 0.5s;
 }
 
 window#waybar.hidden {
-    opacity: 0.2;
+  opacity: 0.2;
 }
 
 button {
-    /* Use box-shadow instead of border so the text isn't offset */
-    box-shadow: inset 0 -3px transparent;
-    /* Avoid rounded borders under each button name */
-    border: none;
-    border-radius: 0;
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
+  border: none;
+  border-radius: 0;
 }
 
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 button:hover {
-    background: inherit;
-    box-shadow: inset 0 -3px #ffffff;
+  background: inherit;
+  box-shadow: inset 0 -3px #ffffff;
 }
 
 #tooltip {
   background-color: @background;
-
 }
 
 /*WORKSPACES style*/
 #workspaces {
-  background-color: @color0;
-  border-radius: 20px;
+  background-color: @color1;
+  border-radius: 0px;
   padding: 0px 5px 0px 5px;
 }
 #workspaces button.active {
-  background-color: @background;
-  border-radius: 18px;
+  background-color: @color10;
+  border-radius: 0px;
   padding-left: 12px;
   padding-right: 12px;
 }
@@ -75,22 +75,19 @@ button:hover {
 }
 /*WINDOW style*/
 #window {
-  background-color: @color0;
+  background-color: @color1;
   padding-left: 15px;
   padding-right: 15px;
-  border-radius:  0px 18px 18px 0px;
-
+  border-radius: 0px 18px 18px 0px;
 }
 #waybar.empty #window {
-  background-color: @color0;
+  background-color: @color1;
   padding: 3px;
-  
-
 }
 /*clock*/
-#clock{
+#clock {
   margin-right: 2px;
-  background-color: @color0;
+  background-color: @color1;
   border-radius: 18px 0px 0px 18px;
   padding-left: 10px;
   padding-right: 10px;
@@ -108,52 +105,54 @@ button:hover {
 
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
-    margin-left: 0;
-    margin-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 /* If workspaces is the rightmost module, omit right margin */
 .modules-right > widget:last-child > #workspaces {
-    margin-right: 0;
+  margin-right: 0;
 }
-
 
 #battery {
-    background-color: @color0;
-    border-radius: 0px 18px 18px 0px;
-    padding-left: 5px;
-    padding-right: 8px;
+  background-color: @color1;
+  border-radius: 0px 18px 18px 0px;
+  padding-left: 5px;
+  padding-right: 8px;
 }
 
-#battery.charging, #battery.plugged {
-    color: @color15;
-    background-color: #225522;
-
+#battery.charging,
+#battery.plugged {
+  color: @color15;
+  background-color: #225522;
 }
 
 @keyframes blink {
-    to {
-        background-color: @color12;
-        color: @color2;
-    }
+  to {
+    background-color: @color12;
+    color: @color2;
+  }
 }
 
 /* Using steps() instead of linear as a timing function to limit cpu usage */
 #battery.critical:not(.charging) {
-    background-color: @color5;
-    color: #ffffff;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+  background-color: @color5;
+  color: #ffffff;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(12);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-#cpu, #memory, #disk, #temperature {
-    background-color: @color0;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 20px;
+#cpu,
+#memory,
+#disk,
+#temperature {
+  background-color: @color1;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 20px;
 }
 #cpu {
   border-radius: 20px 0px 0px 20px;
@@ -170,43 +169,41 @@ button:hover {
 }
 
 #temperature.critical {
-    background-color: #eb4d4b;
+  background-color: #eb4d4b;
 }
 
 #backlight {
-    background-color: @color0;
-    padding-left: 5px;
-    padding-right: 5px;
+  background-color: @color1;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #network {
-    background-color: @color0;
-    padding-left: 10px;
-    padding-right: 10px;
-
+  background-color: @color1;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 #network.disconnected {
-    background-color: @color6;
+  background-color: @color6;
 }
 
 #pulseaudio {
-    border-radius: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: @color0;
-    color: @color15;
-    transition-property: all;
-    transition-duration: 0.5s;
+  border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: @color1;
+  transition-property: all;
+  transition-duration: 0.5s;
 }
 
 #pulseaudio.muted {
-    background-color: @color6;
-    padding-left: 5px;
-    color: @color15;
+  background-color: @color6;
+  padding-left: 5px;
+  color: #101010;
 }
 #bluetooth {
-  background-color: @color0;
+  background-color: @color1;
   padding-left: 7px;
   padding-right: 7px;
   border-radius: 20px;
@@ -215,58 +212,57 @@ button:hover {
 #idle_inhibitor {
   padding-left: 10px;
   padding-right: 10px;
-  background-color: @color0;
+  background-color: @color1;
   border-radius: 20px;
 }
 
 #idle_inhibitor.activated {
-    background-color: @color6;
+  background-color: @color6;
 }
 #mpris {
-  background-color: @color0;
+  background-color: @color1;
   padding-left: 10px;
   padding-right: 10px;
 
   border-radius: 20px;
 }
 
-
 #keyboard-state {
-    background: #97e1ad;
-    color: #000000;
-    padding: 0 0px;
-    margin: 0 5px;
-    min-width: 16px;
+  background: #97e1ad;
+  color: #000000;
+  padding: 0 0px;
+  margin: 0 5px;
+  min-width: 16px;
 }
 
 #keyboard-state > label {
-    padding: 0 5px;
+  padding: 0 5px;
 }
 
 #keyboard-state > label.locked {
-    background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 
 #privacy {
-    padding: 0;
+  padding: 0;
 }
 #privacy-item {
-    padding: 0 5px;
-    color: white;
+  padding: 0 5px;
+  color: white;
 }
 #privacy-item.screenshare {
-    background-color: #cf5700;
+  background-color: #cf5700;
 }
 
 #privacy-item.audio-in {
-    background-color: #1ca000;
+  background-color: #1ca000;
 }
 #privacy-item.audio-out {
-    background-color: #0069d4;
+  background-color: #0069d4;
 }
 
 #custom-power {
-  background-color: @color2;
+  background-color: @background;
   border-radius: 20px;
   padding-left: 12px;
   padding-right: 10px;

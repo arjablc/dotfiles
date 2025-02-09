@@ -108,6 +108,7 @@ alias fl_br="dart run build_runner "
 alias fl_brw="dart run build_runner watch --delete-conflicting-outputs" 
 alias lg="lazygit "
 alias tm="tmux "
+alias yz="yazi "
 
 eval "$(starship init zsh)"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
@@ -115,6 +116,7 @@ export PATH="$PATH:$HOME/Android/Sdk/platform-tools/"
 export PATH="$HOME/flutter/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/home/knot/.config/heroic/tools/wine/Wine-GE-Proton8-26/bin:$PATH"
+
 
 export QT_QPA_PLATFORMTHEME=qt6ct
 fastfetch -c ~/.config/fastfetch/fastfetch-compact.jsonc
