@@ -116,6 +116,7 @@ export PATH="$PATH:$HOME/Android/Sdk/platform-tools/"
 export PATH="$HOME/flutter/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/home/knot/.config/heroic/tools/wine/Wine-GE-Proton8-26/bin:$PATH"
+export JAVA_HOME="/opt/android-studio/jbr/"
 
 
 export QT_QPA_PLATFORMTHEME=qt6ct

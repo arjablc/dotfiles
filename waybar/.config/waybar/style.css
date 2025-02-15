@@ -20,7 +20,7 @@ button {
 window#waybar {
   background-color: @color1;
   border-radius: 16;
-  color: #ffffff;
+  color: #cccccc;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
