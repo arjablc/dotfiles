@@ -15,5 +15,3 @@ stow hypr #use desired name in place of hypr
 - Working on a bash script to install required packages.
     [install_script](./install_script.md)
     Refer there to see requirements 
-
-    Random change
