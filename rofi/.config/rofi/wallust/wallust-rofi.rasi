@@ -1,16 +1,16 @@
 * {
 
-background: #0A060D;
-foreground: #B0ACB2;
+background: #04060B;
+foreground: #AAACB1;
 
-activecolor: #5A1221;
-selectedcolor: #270F1C;
-bordercolor: #240D0A;
-selectedtext: #868089;
-selectedbackgroundcolor: #341426;
+activecolor: #655852;
+selectedcolor: #202026;
+bordercolor: #35312E;
+selectedtext: #7D8086;
+selectedbackgroundcolor: #2B2A33;
 
 
-urgentcolor: #5D5A60;
+urgentcolor: #58595E;
 
 
 

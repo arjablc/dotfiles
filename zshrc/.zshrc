@@ -117,6 +117,8 @@ export PATH="$HOME/flutter/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="/home/knot/.config/heroic/tools/wine/Wine-GE-Proton8-26/bin:$PATH"
 export JAVA_HOME="/opt/android-studio/jbr/"
+# for the flutter web to run on brave broweser
+export CHROME_EXECUTABLE="/usr/bin/brave" 
 
 
 export QT_QPA_PLATFORMTHEME=qt6ct

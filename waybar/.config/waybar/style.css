@@ -1,7 +1,7 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: FontAwesome, "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial,
-    sans-serif;
+  font-family:
+    FontAwesome, "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
   font-size: 13px;
   padding-top: 0px;
   padding-bottom: 0px;
@@ -19,7 +19,7 @@ button {
 
 window#waybar {
   background-color: @color1;
-  border-radius: 16;
+  border-radius: 0;
   color: #cccccc;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -51,13 +51,13 @@ button:hover {
 #workspaces {
   background-color: @color1;
   border-radius: 0px;
+  border: 5px @color15;
   padding: 0px 5px 0px 5px;
 }
 #workspaces button.active {
-  background-color: @color10;
+  background-color: transparent;
   border-radius: 0px;
-  padding-left: 12px;
-  padding-right: 12px;
+  border: 3px solid @color15;
 }
 #workspaces button.urgent {
   background-color: #c1121f;
@@ -68,14 +68,15 @@ button:hover {
   margin-right: 5px;
 }
 #workspaces button:hover {
-  border-radius: 20px;
-  background-color: @background;
-  border: none;
+  background-color: transparent;
+  border: 3px solid @color15;
   box-shadow: 0px 2px 0px @color15;
 }
+
 /*WINDOW style*/
 #window {
   background-color: @color1;
+  border: 3px @color15;
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 0px 18px 18px 0px;
