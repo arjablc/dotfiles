@@ -2,9 +2,13 @@
   /* `otf-font-awesome` is required to be installed for icons */
   font-family:
     FontAwesome, "JetBrainsMono Nerd Font", Roboto, Helvetica, Arial, sans-serif;
-  font-size: 13px;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  font-weight: bolder;
   padding-top: 0px;
   padding-bottom: 0px;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
 /*Makes the bar slimmer*/
@@ -18,7 +22,7 @@ button {
 @import "./wallust/wallust-waybar.css";
 
 window#waybar {
-  background-color: @color1;
+  background-color: transparent;
   border-radius: 0;
   color: #cccccc;
   transition-property: background-color;
@@ -49,7 +53,7 @@ button:hover {
 
 /*WORKSPACES style*/
 #workspaces {
-  background-color: @color1;
+  background-color: @color10;
   border-radius: 0px;
   border: 5px @color15;
   padding: 0px 5px 0px 5px;
@@ -71,6 +75,8 @@ button:hover {
   background-color: transparent;
   border: 3px solid @color15;
   box-shadow: 0px 2px 0px @color15;
+  border-radius: 0px;
+  margin: 0px 4px;
 }
 
 /*WINDOW style*/
@@ -89,7 +95,7 @@ button:hover {
 #clock {
   margin-right: 2px;
   background-color: @color1;
-  border-radius: 18px 0px 0px 18px;
+  border-radius: 0px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -117,7 +123,7 @@ button:hover {
 
 #battery {
   background-color: @color1;
-  border-radius: 0px 18px 18px 0px;
+  border-radius: 0px;
   padding-left: 5px;
   padding-right: 8px;
 }
@@ -176,7 +182,7 @@ button:hover {
 #backlight {
   background-color: @color1;
   padding-left: 5px;
-  padding-right: 5px;
+  padding-right: 8px;
 }
 
 #network {
@@ -190,7 +196,7 @@ button:hover {
 }
 
 #pulseaudio {
-  border-radius: 20px;
+  border-radius: 0px;
   padding-left: 10px;
   padding-right: 10px;
   background-color: @color1;
@@ -207,14 +213,14 @@ button:hover {
   background-color: @color1;
   padding-left: 7px;
   padding-right: 7px;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 #idle_inhibitor {
   padding-left: 10px;
   padding-right: 10px;
   background-color: @color1;
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 #idle_inhibitor.activated {
@@ -225,7 +231,7 @@ button:hover {
   padding-left: 10px;
   padding-right: 10px;
 
-  border-radius: 20px;
+  border-radius: 0px;
 }
 
 #keyboard-state {

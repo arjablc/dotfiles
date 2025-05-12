@@ -2,32 +2,34 @@
 {
   // "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
-  "spacing": 2, // Gaps between modules (4px)
-  "margin-top": 4,
-  "height": 8,
-  "margin-left": 8,
-  "margin-right": 8,
+	"position": "top",
+  "spacing": 1, // Gaps between modules (4px)
+  "height":  6,
+	"margin-left":4 ,
+	"margin-right":4 ,
+	"margin-top": 2,
+	"margin-bottom":2 ,
   "mode": "dock",
   "reload_style_on_change": false,
   // Choose the order of the modules
   "modules-left": [
     "idle_inhibitor",
     "mpris",
-    "group/right-group",
-    "custom/gap"
+    "hyprland/workspaces",
+    "custom/gap",
   ],
   "modules-center": [
-    "hyprland/workspaces"
+		"clock",
   ],
   "modules-right": [
     "bluetooth",
     "pulseaudio",
-    "group/info",
+    // "group/info",
     "network",
     "backlight",
     "battery",
-    "custom/gapright",
-    "custom/power"
+    "custom/gapright"
+    // "custom/power"
   ],
   "group/right-group": {
     "orientation": "horizontal",
@@ -273,12 +275,13 @@
     "format-diabled": "{status}󰂯",
     "format-connected": "{device_alias}",
     "on-click": "blueman-manager"
+		// "on-click-middle": "blueman-manager --disconnect"
   },
   "custom/gapright": {
     "format": ""
   },
   "custom/power": {
-    "format": " ",
+    "format": "",
     "tooltip": false,
     "menu": "on-click",
     "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
