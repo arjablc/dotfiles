@@ -109,6 +109,7 @@ alias fl_brw="dart run build_runner watch --delete-conflicting-outputs"
 alias lg="lazygit "
 alias tm="tmux "
 alias yz="yazi "
+alias lines="find . -name '*.dart' | xargs -I {} cat {} | wc -l"
 
 eval "$(starship init zsh)"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
