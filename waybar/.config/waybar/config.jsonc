@@ -19,6 +19,7 @@
     "custom/gap",
   ],
   "modules-center": [
+		
 		"clock",
   ],
   "modules-right": [
@@ -62,6 +63,8 @@
     "disable-scroll": false,
     "all-outputs": true,
     "warp-on-scroll": false,
+		"on-scroll-up": "$HOME/.config/waybar/scripts/hypr_workspaces.sh down",
+		"on-scroll-down": "$HOME/.config/waybar/scripts/hypr_workspaces.sh up",
     "persistent-workspaces": {
       "*": 5
     },
@@ -270,10 +273,10 @@
     "max-length": 30
   },
   "bluetooth": {
-    "format": "{status}󰂯",
+    "format": "",
     "format-off": "",
     "format-diabled": "{status}󰂯",
-    "format-connected": "{device_alias}",
+    "format-connected": "{status}󰂯",
     "on-click": "blueman-manager"
 		// "on-click-middle": "blueman-manager --disconnect"
   },
