@@ -6,6 +6,7 @@ foreground: {{foreground}};
 activecolor: {{color5}};
 selectedcolor: {{color2}};
 bordercolor: {{color0}};
+selectedbordercolor: {{color15}};
 selectedtext: {{color15}};
 selectedbackgroundcolor: {{color10}};
 

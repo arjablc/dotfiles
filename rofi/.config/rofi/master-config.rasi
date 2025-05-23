@@ -5,19 +5,21 @@
 /* ---- Configuration ---- */
 
 configuration {
-	font:						"Fira Code SemiBold 12";
+	font:												"Fira Code SemiBold 12";
 	modi:                       "drun,run,filebrowser";
     show-icons:                 true;
     display-drun:               "Apps";
     display-run:                "Run";
     display-filebrowser:        "Files";
     display-window:             "Windows";
+		display-emoji: 							"emoji";
 	drun-display-format:        "{name}";
 	hover-select:               true;
 	me-select-entry:            "MouseSecondary";
     me-accept-entry:            "MousePrimary";
 	window-format:              "{w} · {c} · {t}";
 	dpi:						1;
+	
 }
 
 /* ---- Load wallust colors ---- */
@@ -45,18 +47,19 @@ window {
     cursor:                     "default";
     spacing:                    0px;
     border:                     3px; 
-    border-radius:              10px;
+    border-radius:              0px;
     location:                   center;
     anchor:                     center;
+		border-color: 							@selectedbordercolor;
 
     // Style Values
-    width:                      40%;
+    width:                      50%;
     background-color:           @background;
 }
 
 /* ----- Main Box ----- */
 mainbox {
-    padding:					 15px;
+    padding:				          	 15px;
     enabled:                     true;
     orientation:                 vertical;
     children:                    [ "inputbar", "listbox" ];
@@ -70,10 +73,10 @@ inputbar {
     padding:                     10px 10px 100px 10px;
     margin:                      10px;
     background-color:            transparent;
-    border-radius:               25px;
+    border-radius:               0px;
     orientation:                 horizontal;
     children:                    ["entry", "dummy", "mode-switcher" ];
-    background-image:            url("~/.config/rofi/.current_wallpaper", width);
+    background-image:            url("~/Downloads/wallpaper/jpn_tree.png", width);
 }
 
 /* ---- Entry input ---- */
@@ -82,8 +85,9 @@ entry {
     expand:                      false;
     width:                       20%;
     padding:                     10px;
-    border-radius:               10px;
-    background-color:            @selectedbackgroundcolor;
+    border-radius:               00px;
+    background-color:            @background;
+		border-color: @selectedbordercolor;
     text-color:                  @selectedtext;
     cursor:                      text;
     placeholder:                 "Search"; // << Search symbol
@@ -102,10 +106,10 @@ listbox {
 /* ---- Listview ---- */
 listview {
     enabled:                     true;
-    columns:                     1;
-    lines:                       6;
-    cycle:                       true;
-    dynamic:                     true;
+    columns:                     2;
+    lines:                       4;
+    cycle:                       false;
+    dynamic:                     false;
     scrollbar:                   true;
     layout:                      vertical;
     reverse:                     false;
@@ -113,8 +117,6 @@ listview {
     fixed-columns:               true;    
     spacing:                     10px;
     background-color:            transparent;
-
-//  Adapt rofi theme
     border:                      0px;
 }
 
@@ -132,22 +134,27 @@ mode-switcher{
 }
 button {
     width:                       5%;
-    padding:                     12px;
-    border-radius:               10px;
-    background-color:            @selectedbackgroundcolor;
+    padding:                     4px 8px;
+    border-radius:               0px;
+	border: 3px;
+	bordercolor: @selectedbordercolor;
+    background-color:            @background;
     text-color:                  @selectedtext;
     cursor:                      pointer;
 }
 button selected {
-    background-color:            @selected;
+    // background-color:            @selected;
     text-color:                  @selectedtext;
+	border: 3px;
+	border-color: @selectedbordercolor;
 }
 
 /* ---- Scrollbar ---- */
 scrollbar {
     width:        4px ;
     border:       0;
-    handle-color: @border-color;
+    handle-color: @foreground;
+		background-color: @bordercolor;
     handle-width: 8px ;
     padding:      0;
 }
@@ -157,7 +164,7 @@ element {
     enabled:                     true;
     spacing:                     10px;
     padding:                     10px;
-    border-radius:               8px;
+    border-radius:               0px;
     background-color:            transparent;
     cursor:                      pointer;
 }
@@ -174,15 +181,14 @@ element normal.active {
     background-color:            @activecolor;
     text-color:                  @foreground;
 }
-
 element selected.normal {
     border:                      3px; 
-    border-radius:               16px;
-    border-color:                @selected;
+    border-radius:               0px;
+    border-color:                @selectedbordercolor;
+	
     background-color:            transparent;
     text-color:                  @selectedtext;
 }
-
 element selected.urgent {
     background-color:            @urgentcolor;
     text-color:                  @selectedtext;
@@ -190,6 +196,7 @@ element selected.urgent {
 element selected.active {
     background-color:            @urgentcolor;
     text-color:                  @selectedtext;
+
 }
 // Adapt rofi theme
 element alternate.normal {
@@ -209,10 +216,13 @@ element-icon {
     text-color:                  inherit;
     cursor:                      inherit;
 }
+	// 
 element-text {
-    font:						"Caskaydia Mono Nerd Font 10";
+    font:						"Caskaydia Mono Nerd Font 13";
+		letter-spacing: 2px;
+		font-weight: bold;
     background-color:            transparent;
-    text-color:                  inherit;
+    text-color:                  @foreground;
     cursor:                      inherit;
     vertical-align:              0.5;
     horizontal-align:            0.0;
@@ -225,7 +235,7 @@ message {
 }
 textbox {
     padding:                     12px;
-    border-radius:               10px;
+    border-radius:               0px;
     background-color:            @background;
     text-color:                  @background;
     vertical-align:              0.5;

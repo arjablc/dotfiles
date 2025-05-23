@@ -1,13 +1,14 @@
 * {
 
-background: #09090B;
+background: #1B1E23;
 foreground: #AFAFB1;
 
-activecolor: #643F3A;
-selectedcolor: #281F20;
-bordercolor: #463936;
+activecolor: #8C544B;
+selectedcolor: #3A404B;
+bordercolor: #201E1E;
+selectedbordercolor: #848587;
 selectedtext: #848587;
-selectedbackgroundcolor: #35292B;
+selectedbackgroundcolor: #4E5564;
 
 
 urgentcolor: #5C5D5E;

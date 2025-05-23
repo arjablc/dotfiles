@@ -10,7 +10,7 @@
 	"margin-top": 2,
 	"margin-bottom":2 ,
   "mode": "dock",
-  "reload_style_on_change": false,
+  "reload_style_on_change": true,
   // Choose the order of the modules
   "modules-left": [
     "idle_inhibitor",

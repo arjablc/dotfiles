@@ -2,22 +2,22 @@
  /* wallust template - colors-waybar */
 
 @define-color foreground #AFAFB1;
-@define-color background rgba(9,9,11,0.25);
-@define-color cursor #9A817F;
+@define-color background rgba(27,30,35,0.25);
+@define-color cursor #B5908A;
 
-@define-color color0 #463936;
+@define-color color0 #201E1E;
 @define-color color1 #141418;
-@define-color color2 #281F20;
-@define-color color3 #3C2A29;
-@define-color color4 #503431;
-@define-color color5 #643F3A;
-@define-color color6 #784942;
+@define-color color2 #3A404B;
+@define-color color3 #3F414B;
+@define-color color4 #684B4B;
+@define-color color5 #8C544B;
+@define-color color6 #746E6E;
 @define-color color7 #848587;
 @define-color color8 #5C5D5E;
 @define-color color9 #1A1B20;
-@define-color color10 #35292B;
-@define-color color11 #503737;
-@define-color color12 #6A4642;
-@define-color color13 #85544D;
-@define-color color14 #A06259;
+@define-color color10 #4E5564;
+@define-color color11 #545664;
+@define-color color12 #8B6464;
+@define-color color13 #BB7064;
+@define-color color14 #9B9392;
 @define-color color15 #848587;

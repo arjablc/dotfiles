@@ -31,7 +31,7 @@ palette = "harddark16"
 #  2 - 10     Perceptible at a glance.
 #  11 - 49    Colors are more similar than opposite
 #  100        Colors are exact opposite
-threshold = 15
+threshold = 11
 
 [templates]
 
@@ -58,3 +58,6 @@ kitty.target = '~/.config/kitty/wallust-kitty.conf'
 
 #zathura.template = 'colors-zathura'
 #zathura.target = '~/.config/zathura/zathurarc'
+
+[output]
+term = false
