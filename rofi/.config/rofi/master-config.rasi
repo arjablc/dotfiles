@@ -76,7 +76,7 @@ inputbar {
     border-radius:               0px;
     orientation:                 horizontal;
     children:                    ["entry", "dummy", "mode-switcher" ];
-    background-image:            url("~/Downloads/wallpaper/jpn_tree.png", width);
+    background-image:            url("~/Downloads/wallpapers/wallpaper_2.png", width);
 }
 
 /* ---- Entry input ---- */
