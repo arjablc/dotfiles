@@ -9,7 +9,6 @@ entry {
 	horizontal-align: 0.0;
 	vertical-align: 0.5;
 	expand: true;
-
 }
 
 // /* ---- Configuration ---- */

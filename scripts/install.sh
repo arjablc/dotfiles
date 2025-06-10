@@ -23,6 +23,7 @@ packages=(
   "hypridle"
   "nwg-look"
   "swww"
+	"mako"
   "wallust"
   "rofi-wayland"
   "wlogout"

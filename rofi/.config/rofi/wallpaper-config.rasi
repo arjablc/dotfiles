@@ -1,0 +1,41 @@
+/* ---- 💫 Wallpaper Selector Config 💫 ---- */
+/* Import master config and override for wallpaper selection */
+@import "~/.config/rofi/master-config.rasi"
+
+/* ---- Configuration Overrides ---- */
+configuration {
+    display-drun:               "Wallpapers";
+}
+
+
+/* ---- Window Overrides ---- */
+window {
+    width:                      40%;
+    height:                     40%;
+}
+
+
+/* ---- Listview Overrides ---- */
+listview {
+    lines:                      4;
+    spacing:                    15px;
+}
+
+/* ---- Element Overrides for Wallpaper Thumbnails ---- */
+element {
+    padding:                    0px;
+    orientation:                vertical;
+}
+
+element-icon {
+    size:                       150px;
+    border:                     0px;
+    border-color:               @bordercolor;
+}
+
+element-text {
+    font:                       "Caskaydia Mono Nerd Font 10";
+    letter-spacing:             1px;
+    horizontal-align:           0.5;
+    width:                      120px;
+}
