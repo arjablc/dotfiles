@@ -27,6 +27,7 @@ packages=(
   "wallust"
   "rofi-wayland"
   "wlogout"
+	"hyprsunset"
   "bluez"
   "blueman"
   "pavucontrol"

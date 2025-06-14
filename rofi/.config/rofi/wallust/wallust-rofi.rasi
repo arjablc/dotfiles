@@ -1,17 +1,17 @@
 * {
 
-background: #0C0D0E;
-foreground: #B2B3B3;
+background: #0F080C;
+foreground: #B4AEB1;
 
-activecolor: #B30325;
-selectedcolor: #23221D;
-bordercolor: #303D30;
-selectedbordercolor: #888A8B;
-selectedtext: #888A8B;
-selectedbackgroundcolor: #2F2D27;
+activecolor: #AB8E20;
+selectedcolor: #4E237C;
+bordercolor: #223834;
+selectedbordercolor: #8C8388;
+selectedtext: #8C8388;
+selectedbackgroundcolor: #682EA5;
 
 
-urgentcolor: #5F6161;
+urgentcolor: #625B5F;
 
 
 
