@@ -1,23 +1,23 @@
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */  
  /* wallust template - colors-waybar */
 
-@define-color foreground #B4AEB1;
-@define-color background rgba(15,8,12,0.25);
-@define-color cursor #CCB56E;
+@define-color foreground #B2B3B3;
+@define-color background rgba(12,13,14,0.25);
+@define-color cursor #D05C72;
 
-@define-color color0 #223834;
-@define-color color1 #1F1119;
-@define-color color2 #4E237C;
-@define-color color3 #80410E;
-@define-color color4 #8A6A92;
-@define-color color5 #AB8E20;
-@define-color color6 #16AA98;
-@define-color color7 #8C8388;
-@define-color color8 #625B5F;
-@define-color color9 #2A1721;
-@define-color color10 #682EA5;
-@define-color color11 #AB5713;
-@define-color color12 #B88EC2;
-@define-color color13 #E4BD2B;
-@define-color color14 #1DE3CB;
-@define-color color15 #8C8388;
+@define-color color0 #303D30;
+@define-color color1 #191D1D;
+@define-color color2 #23221D;
+@define-color color3 #543B1E;
+@define-color color4 #5B5249;
+@define-color color5 #B30325;
+@define-color color6 #8E591F;
+@define-color color7 #888A8B;
+@define-color color8 #5F6161;
+@define-color color9 #222627;
+@define-color color10 #2F2D27;
+@define-color color11 #704E28;
+@define-color color12 #796D61;
+@define-color color13 #EF0431;
+@define-color color14 #BE7629;
+@define-color color15 #888A8B;

@@ -109,7 +109,7 @@ alias fl_brw="dart run build_runner watch --delete-conflicting-outputs"
 alias lg="lazygit "
 alias tm="tmux "
 alias yz="yazi "
-alias lines="find . -name '*.dart' | xargs -I {} cat {} | wc -l"
+alias lines="find . -name '*.dart' ! -name '*.g.dart' ! -name '*.freezed.dart' -print0 | xargs -0 cat | wc -l"
 
 eval "$(starship init zsh)"
 export PATH="$PATH":"$HOME/.pub-cache/bin"
@@ -126,3 +126,5 @@ fastfetch -c ~/.config/fastfetch/fastfetch-compact.jsonc
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
