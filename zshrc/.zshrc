@@ -112,9 +112,12 @@ alias yz="yazi "
 alias lines="find . -name '*.dart' ! -name '*.g.dart' ! -name '*.freezed.dart' -print0 | xargs -0 cat | wc -l"
 
 eval "$(starship init zsh)"
+eval "$(zoxide init bash)"
+
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH:$HOME/Android/Sdk/platform-tools/"
 export PATH="$HOME/src/flutter/bin:$PATH"
+export FLUTTER_SDK="$HOME/src/flutter/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 export JAVA_HOME="/opt/android-studio/jbr/"
 # for the flutter web to run on brave broweser
@@ -122,7 +125,6 @@ export CHROME_EXECUTABLE="/usr/bin/brave"
 
 
 export QT_QPA_PLATFORMTHEME=qt6ct
-fastfetch -c ~/.config/fastfetch/fastfetch-compact.jsonc
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
