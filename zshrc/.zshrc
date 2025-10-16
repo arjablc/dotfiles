@@ -112,11 +112,11 @@ alias yz="yazi "
 alias lines="find . -name '*.dart' ! -name '*.g.dart' ! -name '*.freezed.dart' -print0 | xargs -0 cat | wc -l"
 
 eval "$(starship init zsh)"
-eval "$(zoxide init bash)"
+eval "$(zoxide init zsh)"
 
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH:$HOME/Android/Sdk/platform-tools/"
-export PATH="$HOME/src/flutter/bin:$PATH"
+export PATH="$HOME/Devl/sources/flutter/bin:$PATH"
 export FLUTTER_SDK="$HOME/src/flutter/bin"
 export PATH="$HOME/.cargo/bin:$PATH"
 export JAVA_HOME="/opt/android-studio/jbr/"
