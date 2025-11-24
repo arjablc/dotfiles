@@ -116,8 +116,9 @@ eval "$(zoxide init zsh)"
 
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH:$HOME/Android/Sdk/platform-tools/"
-export PATH="$HOME/Devl/sources/flutter/bin:$PATH"
-export FLUTTER_SDK="$HOME/src/flutter/bin"
+
+export PATH="$HOME/fvm/default/bin:$PATH"
+
 export PATH="$HOME/.cargo/bin:$PATH"
 export JAVA_HOME="/opt/android-studio/jbr/"
 # for the flutter web to run on brave broweser
@@ -130,3 +131,14 @@ export QT_QPA_PLATFORMTHEME=qt6ct
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 [[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
+export PATH=$HOME?/.local/bin:$PATH
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /home/knot/.config/.dart-cli-completion/zsh-config.zsh ]] && . /home/knot/.config/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
