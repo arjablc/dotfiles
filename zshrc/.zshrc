@@ -104,9 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias nv="nvim "
 alias notes="cd ~/Documents/notes_vault/ && nvim "
-alias fl_br="dart run build_runner " 
-alias fl_brw="dart run build_runner watch --delete-conflicting-outputs" 
-alias fl_brb="dart run build_runner build --delete-conflicting-outputs" 
+alias flbr="dart run build_runner " 
+alias flbrw="dart run build_runner watch --delete-conflicting-outputs" 
+alias flbrb="dart run build_runner build --delete-conflicting-outputs" 
 alias lg="lazygit "
 alias tm="tmux "
 alias yz="yazi "
@@ -117,16 +117,12 @@ eval "$(zoxide init zsh)"
 
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH:$HOME/Android/Sdk/platform-tools/"
-
+export VCPKG_ROOT="$HOME/vcpkg"
 export PATH="$HOME/fvm/default/bin:$PATH"
-
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export JAVA_HOME="/opt/android-studio/jbr/"
-# for the flutter web to run on brave broweser
 export CHROME_EXECUTABLE="/usr/bin/brave" 
-
-
 export QT_QPA_PLATFORMTHEME=qt6ct
 
 # Generated for envman. Do not edit.
