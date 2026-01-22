@@ -112,8 +112,8 @@ alias tm="tmux "
 alias yz="yazi "
 alias lines="find . -name '*.dart' ! -name '*.g.dart' ! -name '*.freezed.dart' -print0 | xargs -0 cat | wc -l"
 
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
+export STARSHIP_CONFIG="$HOME/.config/starship/starship.toml"
+
 
 export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH:$HOME/Android/Sdk/platform-tools/"
@@ -133,10 +133,13 @@ export PATH=$HOME?/.local/bin:$PATH
 
 export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ## [Completion]
 ## Completion scripts setup. Remove the following line to uninstall
 [[ -f /home/knot/.config/.dart-cli-completion/zsh-config.zsh ]] && . /home/knot/.config/.dart-cli-completion/zsh-config.zsh || true
 ## [/Completion]
 
+
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
